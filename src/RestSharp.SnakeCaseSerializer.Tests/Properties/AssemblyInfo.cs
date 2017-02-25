@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("RestSharp.SnakeCaseSerializer.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Support for converting an objects properties to snake_case.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("mrstebo")]
 [assembly: AssemblyProduct("RestSharp.SnakeCaseSerializer.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
