@@ -61,7 +61,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RestSharp.SnakeCaseSerializer\RestSharp.SnakeCaseSerializer.csproj">
+    <ProjectReference Include="..\RestSharp.SnakeCaseSerializer.Net35\RestSharp.SnakeCaseSerializer.csproj">
+      <Project>{866d64fb-1e69-4198-bc5d-2824e0717a3f}</Project>
+      <Name>RestSharp.SnakeCaseSerializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestSharp.SnakeCaseSerializer.Net35\RestSharp.SnakeCaseSerializer.csproj">
       <Project>{866d64fb-1e69-4198-bc5d-2824e0717a3f}</Project>
       <Name>RestSharp.SnakeCaseSerializer</Name>
     </ProjectReference>
