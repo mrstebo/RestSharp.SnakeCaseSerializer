@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RestSharp.SnakeCaseSerializer.Tests
 {
@@ -11,7 +9,7 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         {
             SimpleJson.CurrentJsonSerializerStrategy= new SnakeCaseSerializationStrategy();
         }
-       
+
         [Test]
         public void Should_SerializeProperties_As_SnakeCase()
         {
