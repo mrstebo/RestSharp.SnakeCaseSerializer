@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+#if NETSTANDARD2_0
+using SimpleJson;
+#endif
 
 namespace RestSharp.SnakeCaseSerializer
 {
