@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.SnakeCaseSerializer.Tests", "RestSharp.SnakeCaseSerializer.Tests\RestSharp.SnakeCaseSerializer.Tests.csproj", "{FA3CBEAF-AEF6-48FD-B92B-6DC695855CE7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RestSharp.SnakeCaseSerializer", "RestSharp.SnakeCaseSerializer", "{B6B4BAA4-E4A7-45F3-99BA-839007164D7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RestSharp.SnakeCaseSerializer.Net35", "RestSharp.SnakeCaseSerializer.Net35", "{1BC9D3FE-6F22-4CC5-BBB1-52723DAA6E8F}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.SnakeCaseSerializ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.SnakeCaseSerializer", "RestSharp.SnakeCaseSerializer\RestSharp.SnakeCaseSerializer.csproj", "{5D9B3C4E-145A-4FFC-9533-AB40A470638D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.SnakeCaseSerializer.Tests", "RestSharp.SnakeCaseSerializer.Tests\RestSharp.SnakeCaseSerializer.Tests.csproj", "{94395111-790F-4896-AE9D-545238DA3607}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA3CBEAF-AEF6-48FD-B92B-6DC695855CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA3CBEAF-AEF6-48FD-B92B-6DC695855CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA3CBEAF-AEF6-48FD-B92B-6DC695855CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA3CBEAF-AEF6-48FD-B92B-6DC695855CE7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{866D64FB-1E69-4198-BC5D-2824E0717A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{866D64FB-1E69-4198-BC5D-2824E0717A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866D64FB-1E69-4198-BC5D-2824E0717A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +27,10 @@ Global
 		{5D9B3C4E-145A-4FFC-9533-AB40A470638D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D9B3C4E-145A-4FFC-9533-AB40A470638D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D9B3C4E-145A-4FFC-9533-AB40A470638D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94395111-790F-4896-AE9D-545238DA3607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94395111-790F-4896-AE9D-545238DA3607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94395111-790F-4896-AE9D-545238DA3607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94395111-790F-4896-AE9D-545238DA3607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
