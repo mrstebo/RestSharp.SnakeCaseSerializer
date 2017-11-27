@@ -12,7 +12,7 @@ namespace RestSharp.SnakeCaseSerializer
         {
             var sb = new StringBuilder();
 
-            for(var i = 0; i < clrPropertyName.Length; i++)
+            for (var i = 0; i < clrPropertyName.Length; i++)
             {
                 var c = clrPropertyName[i];
                 var pc = i > 0 ? clrPropertyName[i - 1] : '\0';
@@ -22,18 +22,19 @@ namespace RestSharp.SnakeCaseSerializer
                 else
                     sb.Append(char.ToLower(c));
             }
-            
+
             return sb.ToString();
         }
 
         protected override bool TrySerializeUnknownTypes(object input, out object output)
         {
-            bool returnValue =  base.TrySerializeUnknownTypes(input, out output);
+            var returnValue = base.TrySerializeUnknownTypes(input, out output);
 
-            if (this.IgnoreNullProperties && output is IDictionary<string, object>)
+            if (IgnoreNullProperties && output is IDictionary<string, object>)
             {
-                IDictionary<string, object> obj = output as IDictionary<string, object>;
-                output = obj.Where(o => o.Value != null).ToDictionary(o => o.Key, o => o.Value);
+                output = ((IDictionary<string, object>) output)
+                    .Where(o => o.Value != null)
+                    .ToDictionary(o => o.Key, o => o.Value);
             }
 
             return returnValue;

@@ -10,14 +10,14 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [SetUp]
         public void SetUp()
         {
-            this._strategyUnderTest = new SnakeCaseSerializationStrategy();
+            _strategyUnderTest = new SnakeCaseSerializationStrategy();
             SimpleJson.CurrentJsonSerializerStrategy = this._strategyUnderTest;
         }
 
         [TearDown]
         public void TearDown()
         {
-            this._strategyUnderTest = null;
+            _strategyUnderTest = null;
             SimpleJson.CurrentJsonSerializerStrategy = null;
         }
 
@@ -51,7 +51,7 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [Test]
         public void WhenIgnoringNullValues_Should_Not_Serialize_Null_Properties()
         {
-            this._strategyUnderTest.IgnoreNullProperties = true;
+            _strategyUnderTest.IgnoreNullProperties = true;
 
             var json = SimpleJson.SerializeObject(new TestData
             {
@@ -66,7 +66,7 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [Test]
         public void WhenNotIgnoringNullValues_Should_Serialize_Null_Properties()
         {
-            this._strategyUnderTest.IgnoreNullProperties = false;
+            _strategyUnderTest.IgnoreNullProperties = false;
 
             var json = SimpleJson.SerializeObject(new TestData
             {
