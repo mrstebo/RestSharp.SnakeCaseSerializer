@@ -1,5 +1,5 @@
 version: '{build}'
-image: Visual Studio 2015
+image: Visual Studio 2017
 configuration: Release
 pull_requests:
   do_not_increment_build_number: true
@@ -25,7 +25,7 @@ build:
   verbosity: minimal
 
 after_build:
-  - cmd: nuget pack src\RestSharp.SnakeCaseSerializer\RestSharp.SnakeCaseSerializer.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
 artifacts:
   - path: '*.nupkg'

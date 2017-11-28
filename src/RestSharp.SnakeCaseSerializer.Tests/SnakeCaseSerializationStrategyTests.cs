@@ -1,6 +1,5 @@
-﻿using System;
-using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using SJ = SimpleJson;
 
 namespace RestSharp.SnakeCaseSerializer.Tests
 {
@@ -12,21 +11,21 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [SetUp]
         public void SetUp()
         {
-            this._strategyUnderTest = new SnakeCaseSerializationStrategy();
-            SimpleJson.CurrentJsonSerializerStrategy = this._strategyUnderTest;
+            _strategyUnderTest = new SnakeCaseSerializationStrategy();
+            SJ.SimpleJson.CurrentJsonSerializerStrategy = this._strategyUnderTest;
         }
 
         [TearDown]
         public void TearDown()
         {
-            this._strategyUnderTest = null;
-            SimpleJson.CurrentJsonSerializerStrategy = null;
+            _strategyUnderTest = null;
+            SJ.SimpleJson.CurrentJsonSerializerStrategy = null;
         }
 
         [Test]
         public void Should_SerializeProperties_As_SnakeCase()
         {
-            var json = SimpleJson.SerializeObject(new
+            var json = SJ.SimpleJson.SerializeObject(new
             {
                 Title = "Sir",
                 FirstName = "Digby",
@@ -41,7 +40,7 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [Test]
         public void Should_HandleNumbers_In_PropertyName()
         {
-            var json = SimpleJson.SerializeObject(new
+            var json = SJ.SimpleJson.SerializeObject(new
             {
                 Number1Property = "test"
             });
@@ -53,9 +52,9 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [Test]
         public void WhenIgnoringNullValues_Should_Not_Serialize_Null_Properties()
         {
-            this._strategyUnderTest.IgnoreNullProperties = true;
+            _strategyUnderTest.IgnoreNullProperties = true;
 
-            var json = SimpleJson.SerializeObject(new TestData
+            var json = SJ.SimpleJson.SerializeObject(new TestData
             {
                 SomeProperty = "test",
                 SomeOtherProperty = null
@@ -68,9 +67,9 @@ namespace RestSharp.SnakeCaseSerializer.Tests
         [Test]
         public void WhenNotIgnoringNullValues_Should_Serialize_Null_Properties()
         {
-            this._strategyUnderTest.IgnoreNullProperties = false;
+            _strategyUnderTest.IgnoreNullProperties = false;
 
-            var json = SimpleJson.SerializeObject(new TestData
+            var json = SJ.SimpleJson.SerializeObject(new TestData
             {
                 SomeProperty = "test",
                 SomeOtherProperty = null
